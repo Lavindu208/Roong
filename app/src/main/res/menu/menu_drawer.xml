@@ -1,4 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_delivery"
+            android:icon="@drawable/ic_delivery"
+            android:title="Delivery"/>
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/ic_faq"
+            android:title="FAQ"/>
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_contact"
+            android:title="Contact"/>
+    </group>
 
+    <item android:title="Categories">
+        <menu>
+            <item
+                android:id="@+id/nav_all_categories"
+                android:title="All Categories"/>
+            <item
+                android:id="@+id/nav_baby_care"
+                android:title="Baby Care"/>
+            <item
+                android:id="@+id/nav_beverages"
+                android:title="Beverages"/>
+            <item
+                android:id="@+id/nav_biscuits"
+                android:title="Biscuits"/>
+            <item
+                android:id="@+id/nav_cakes"
+                android:title="Cakes"/>
+            <item
+                android:id="@+id/nav_chocolate"
+                android:title="Chocolate"/>
+            <item
+                android:id="@+id/nav_coffee"
+                android:title="Coffee"/>
+            <item
+                android:id="@+id/nav_condiments"
+                android:title="Condiments"/>
+            <item
+                android:id="@+id/nav_cooking"
+                android:title="Cooking Essentials"/>
+            <item
+                android:id="@+id/nav_dessert"
+                android:title="Dessert"/>
+            <item
+                android:id="@+id/nav_food"
+                android:title="Food"/>
+            <item
+                android:id="@+id/nav_vegetables"
+                android:title="Fresh Vegetables"/>
+        </menu>
+    </item>
 </menu>
