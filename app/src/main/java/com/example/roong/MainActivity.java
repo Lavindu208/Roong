@@ -116,14 +116,11 @@ public class MainActivity extends AppCompatActivity {
         popupMenu.getMenuInflater().inflate(R.menu.menu_dropdown, popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(item -> {
             int id = item.getItemId();
+            // Handle Settings
             if (id == R.id.action_signin) {
                 // Handle Sign In
                 return true;
-            } else if (id == R.id.action_settings) {
-                // Handle Settings
-                return true;
-            }
-            return false;
+            } else return id == R.id.action_settings;
         });
         popupMenu.show();
     }

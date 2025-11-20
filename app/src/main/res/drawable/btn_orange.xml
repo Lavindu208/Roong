@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <size android:width="48dp" android:height="48dp"/>
-    <solid android:color="#FFB74D"/> <!-- light orange -->
+    android:shape="rectangle">
+
+    <!-- Solid color for the button background -->
+    <solid android:color="@color/orange_primary" /> <!-- Example: Purple color -->
+
+
+    <!-- Define the corner radius -->
+    <corners android:radius="8dp" /> <!-- Adjust the radius as needed -->
+
 </shape>

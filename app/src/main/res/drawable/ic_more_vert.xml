@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <size android:width="48dp" android:height="48dp"/>
-    <solid android:color="#FFB74D"/> <!-- light orange -->
-</shape>
+<!--
+  This vector drawable defines the three vertical dots icon (More/Overflow menu).
+  Vector drawables are preferred because they scale without pixelation.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+
+    <!--
+      The 'pathData' is the SVG path for the standard Material Design vertical overflow icon.
+      It defines three circles at (12, 6), (12, 12), and (12, 18) within the 24x24 viewport.
+    -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+</vector>
