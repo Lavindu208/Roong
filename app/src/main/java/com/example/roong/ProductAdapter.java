@@ -8,24 +8,37 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
 
-    private List<Product> products;
-    private Context context;
+    private final List<Product> products;
+    private final Context context;
+    private final boolean isGridLayout;
 
+    // Constructor for horizontal scroll (Featured Products)
     public ProductAdapter(List<Product> products, Context context) {
         this.products = products;
         this.context = context;
+        this.isGridLayout = false;
+    }
+
+    // Constructor with grid layout option (Organic Products, Shop Screen)
+    public ProductAdapter(List<Product> products, Context context, boolean isGridLayout) {
+        this.products = products;
+        this.context = context;
+        this.isGridLayout = isGridLayout;
     }
 
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_product, parent, false);
+        int layoutId = isGridLayout ? R.layout.item_product_grid : R.layout.item_product;
+        View view = LayoutInflater.from(parent.getContext()).inflate(layoutId, parent, false);
         return new ProductViewHolder(view);
     }
 

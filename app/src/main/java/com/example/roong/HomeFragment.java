@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -53,17 +54,16 @@ public class HomeFragment extends Fragment {
         featuredRecyclerView.setLayoutManager(layoutManager);
 
         List<Product> products = getFeaturedProducts();
-        featuredAdapter = new ProductAdapter(products, getContext());
+        featuredAdapter = new ProductAdapter(products, getContext(), false);
         featuredRecyclerView.setAdapter(featuredAdapter);
     }
 
     private void setupOrganicRecycler() {
-        androidx.recyclerview.widget.GridLayoutManager layoutManager =
-                new androidx.recyclerview.widget.GridLayoutManager(getContext(), 2);
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
         organicRecyclerView.setLayoutManager(layoutManager);
 
         List<Product> products = getOrganicProducts();
-        organicAdapter = new ProductAdapter(products, getContext());
+        organicAdapter = new ProductAdapter(products, getContext(), true);
         organicRecyclerView.setAdapter(organicAdapter);
     }
 
