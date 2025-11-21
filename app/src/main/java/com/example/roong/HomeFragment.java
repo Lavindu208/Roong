@@ -4,11 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,7 +58,8 @@ public class HomeFragment extends Fragment {
     }
 
     private void setupOrganicRecycler() {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        androidx.recyclerview.widget.GridLayoutManager layoutManager =
+                new androidx.recyclerview.widget.GridLayoutManager(getContext(), 2);
         organicRecyclerView.setLayoutManager(layoutManager);
 
         List<Product> products = getOrganicProducts();
