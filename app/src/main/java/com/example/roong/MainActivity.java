@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
-        // Handle back press using OnBackPressedDispatcher (new approach)
+        // Handle back press using OnBackPressedDispatcher
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
